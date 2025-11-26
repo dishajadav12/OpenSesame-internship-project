@@ -15,7 +15,7 @@ function Card({
       className="group block bg-white/90 rounded-2xl shadow-lg ring-1 ring-black/5 p-8 transition hover:shadow-xl hover:-translate-y-0.5"
     >
       <div className="flex items-start gap-4">
-        <div className="h-8 md:h-10 w-8 md-w-10 flex-none rounded-lg bg-gradient-to-br from-orange-500 to-amber-600" />
+        <div className="h-8 md:h-10 w-8 md:w-10 flex-none rounded-lg bg-gradient-to-br from-orange-500 to-amber-600" />
         <div className="flex-1">
           <h3 className="text-lg font-semibold mb-1">{title}</h3>
           <p className="text-sm text-gray-600">{desc}</p>
@@ -35,7 +35,7 @@ export default function HomePage() {
     <main className="px-4 pb-16">
       <section className="pt-12 pb-8 max-w-3xl mx-auto text-center">
         <h1 className="text-xl md:text-2xl font-bold tracking-tight">
-          Disha Jadav 
+          Disha Jadav
         </h1>
         <h1 className="text-xl md:text-2xl font-bold tracking-tight mt-2">
           OpenSesame Internship Project
@@ -44,7 +44,17 @@ export default function HomePage() {
           This mini site is my creative project for the OpenSesame Engineering
           Internship. It includes a short introduction with my answers to the
           application questions and a small AI-powered demo that explores how
-          we might support learners with personalized roadmaps.
+          we might support learners with personalized roadmaps. You can also
+          explore{" "}
+          <a
+            href="https://disha-jadav-portfolio.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-orange-600 font-medium underline-offset-2 hover:underline"
+          >
+            my portfolio
+          </a>{" "}
+          to see more of my background and projects.
         </p>
       </section>
 
