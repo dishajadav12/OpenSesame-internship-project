@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const runtime = 'nodejs';
 
-const allowedModels = new Set(["gemini-2.0-flash", "gemini-2.5-pro", "gemini-flash-latest", "gemini-pro-latest"]);
+const allowedModels = new Set(["gemini-2.5-pro", "gemini-flash-latest", "gemini-pro-latest"]);
 const rateStore: Record<string, { count: number; windowStart: number }> = {};
 
 interface Week {
@@ -274,7 +274,7 @@ export async function POST(req: NextRequest) {
       urlModelParam = null;
     }
     
-    const requestedModel = (bodyObj?.model as string) || urlModelParam || "gemini-2.0-flash";
+    const requestedModel = (bodyObj?.model as string) || urlModelParam || "gemini-flash-latest";
     if (!allowedModels.has(requestedModel)) {
       return NextResponse.json(
         { code: "UNSUPPORTED_MODEL", message: `Model ${requestedModel} is not supported.` }, 
